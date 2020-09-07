@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA7d5yNSKxp4thouPQNwmCSIc5yYjiohmY",
+    authDomain: "img-galt4-9c6ae.firebaseapp.com",
+    databaseURL: "https://img-galt4-9c6ae.firebaseio.com",
+    projectId: "img-galt4-9c6ae",
+    storageBucket: "img-galt4-9c6ae.appspot.com",
+    messagingSenderId: "407561265012",
+    appId: "1:407561265012:web:2664632184fcc678cb1621"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="main.js" defer></script>
+<style>
+  *{box-sizing: border-box;}
+    img{
+        height:100px;
+    }
+    input{
+      width:100%;
+      padding:1%;
+    }
+    .hidden{
+      display:none;
+    }
+    .focus{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100vw;
+      height:100vh;
+      background:#ddd;
+    }
+</style>
+</head>
+<body>
+  <div id="login">
+    <h1>Login</h1>
+    <form id="loginForm" action="" method="get">
+      <input type="email" name="email" placeholder="email">
+      <input type="password" name="password" placeholder="password">
+      <input type="submit" value="Login">
+    </form>
+
+
+  </div>
+<hr>
+<h1>Add Images</h1>
+  <form id="addImageForm" action="" method="get">
+    <input type="text" name="url" placeholder="url"><br>
+    <input type="text" name="name" placeholder="name of photographer"><br>
+    <input type="submit" value="Save">
+  </form>
+
+  <main>
+
+
+  </main>
+
+    
+
+  <div id="edit" class="focus hidden">
+    <h1>Edit</h1>
+    <form id = "editForm" action="" method="get">
+      <input type="text" name="name" >
+      <input type="text" name="url" >
+      <input type="text" name="id">
+      <input type="submit" value="Update">
+    </form>
+  </div>
+</body>
+</html>

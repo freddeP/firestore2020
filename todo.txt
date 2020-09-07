@@ -1,0 +1,9 @@
+image gallery
+
+    1. Upload img url + name of photographer
+        Build CRUD on this
+
+    2. Enable auth
+    3. Configure security rules 
+    4. Force user to add nickname
+    5. Use nickname as name of photographer ( major change of app )
